@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArcadeHub — Gaming Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="ArcadeHub — a clean, responsive gaming portal homepage template. Host on GitHub Pages.">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#6ee7b7;--muted:#9aa7b2;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#e6eef3;background:linear-gradient(180deg,#071224 0%, #07162a 60%);}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#06b6d4,#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:28px;align-items:start}
+    .hero-card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+    h1{margin:0;font-size:28px;color:#fff}
+    p.lead{color:var(--muted);margin-top:10px}
+    .search{display:flex;gap:10px;margin-top:16px}
+    .search input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#eaf6f0}
+    .btn{background:var(--accent);border:none;padding:10px 14px;border-radius:10px;color:#052018;font-weight:700;cursor:pointer}
+    .featured{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .game{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:12px;color:#dff7ef}
+    .game img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+    .tag{font-size:12px;color:var(--muted);background:var(--glass);padding:6px 8px;border-radius:8px}
+    aside.card{background:var(--card);padding:18px;border-radius:14px;color:#cfeee5}
+    .stats{display:flex;gap:12px;justify-content:space-between;margin-top:10px}
+    .stat{background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;text-align:center;flex:1}
+    footer{margin-top:36px;color:var(--muted);text-align:center;padding:20px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;}.featured{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:520px){.featured{grid-template-columns:1fr}.logo{width:40px;height:40px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AH</div>
+        <div>
+          <div style="font-weight:700;color:#fff">ArcadeHub</div>
+          <div style="font-size:12px;color:var(--muted)">Your gateway to web games</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="hero-card">
+        <h1>Play. Compete. Level up — all in one place.</h1>
+        <p class="lead">ArcadeHub is a clean, fast gaming portal that showcases featured indie games, events, and community leaderboards. Ideal for web-based HTML5 and Unity WebGL titles.</p>
+
+        <div class="search" role="search">
+          <input id="searchInput" placeholder="Search games or tags (e.g., platformer, puzzle)..." aria-label="Search games">
+          <button class="btn" id="searchBtn">Search</button>
+        </div>
+
+        <div class="featured" id="games">
+          <article class="game">
+            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=eb7a2f4e6e3bd8c9d8f1ba6f6b2a7a9a" alt="Platformer screenshot">
+            <h3 style="margin:8px 0 0 0">Skybound Runner</h3>
+            <div class="meta"><span class="tag">Platformer</span><span style="font-weight:700">Play</span></div>
+          </article>
+
+          <article class="game">
+            <img src="https://images.unsplash.com/photo-1603780194369-0e4f6d9c9e8b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1d4b4b9f5b3c2a9c6d5f8e9b0a7b3c6d" alt="Puzzle screenshot">
+            <h3 style="margin:8px 0 0 0">Mystic Blocks</h3>
+            <div class="meta"><span class="tag">Puzzle</span><span style="font-weight:700">Play</span></div>
+          </article>
+
+          <article class="game">
+            <img src="https://images.unsplash.com/photo-1606813902896-5d8f4fe0b6b3?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e" alt="Racing screenshot">
+            <h3 style="margin:8px 0 0 0">Turbo Drift</h3>
+            <div class="meta"><span class="tag">Racing</span><span style="font-weight:700">Play</span></div>
+          </article>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted);font-size:14px">Featured tournaments start weekly — join the community and climb the leaderboard!</div>
+
+      </section>
+
+      <aside class="card">
+        <h3 style="margin:0">Quick Stats</h3>
+        <p style="color:var(--muted);margin-top:8px">Active players this week</p>
+        <div class="stats">
+          <div class="stat"><div style="font-size:18px;font-weight:700">1.2K</div><div style="font-size:12px;color:var(--muted)">Players</div></div>
+          <div class="stat"><div style="font-size:18px;font-weight:700">24</div><div style="font-size:12px;color:var(--muted)">Games</div></div>
+          <div class="stat"><div style="font-size:18px;font-weight:700">3</div><div style="font-size:12px;color:var(--muted)">Tournaments</div></div>
+        </div>
+
+        <div style="margin-top:14px">
+          <button id="signup" class="btn" style="width:100%">Create Account</button>
+        </div>
+
+        <div style="margin-top:12px;font-size:13px;color:var(--muted)">Pro tip: Use a GitHub Pages friendly build for Unity WebGL games (deploy to /docs or gh-pages branch).</div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© 2025 ArcadeHub • Built by Sahas</div>
+      <div style="margin-top:6px;color:var(--muted);font-size:13px">Host this page on GitHub Pages — see instructions below.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small interactive behaviors
+    document.getElementById('searchBtn').addEventListener('click', function(){
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      if(!q){ alert('Try searching for "platformer" or "puzzle"'); return; }
+      alert('Search is demo-only. You searched for: ' + q);
+    });
+
+    document.getElementById('signup').addEventListener('click', function(){
+      const url = 'https://github.com/';
+      if(confirm('This is a demo action. Open GitHub to create a free account?')) window.open(url,'_blank');
+    });
+  </script>
+</body>
+</html>
